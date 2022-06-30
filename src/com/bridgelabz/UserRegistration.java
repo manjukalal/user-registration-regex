@@ -84,7 +84,7 @@ public class UserRegistration {
     // rule1 = minimum 8 characters & atleast 1 upper case
     public void validatePasswordOneUpperCase() {
         scanner = new Scanner(System.in);
-        System.out.print("Enter password  :: ");
+        System.out.print("Enter password  : ");
         String password = scanner.nextLine();
         boolean answer = Pattern.matches("[A-Z]+[A-Za-z]{7,}", password);
         if (answer) {
@@ -125,5 +125,19 @@ public class UserRegistration {
             validatePasswordOneSpecialCharacter();
         }
     }
+    public void emailValidation() {
+        scanner = new Scanner(System.in);
+        System.out.print("Enter email ID : ");
+        String Email = scanner.next();
+        boolean answer = Pattern.matches("[a-zA-Z0-9_.]*[-]*[+]*[a-zA-Z0-9]*@[a-zA-Z0-9]+([.][a-zA-Z]+)+", Email);
+        if (answer) {
+            System.out.println(Email);
+            System.out.println(answer);
+        } else {
+            System.out.println("enter valid email");
+            emailValidation();
 
+        }
+
+    }
 }

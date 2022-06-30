@@ -13,5 +13,6 @@ public class RegexMain {
         userRegistration.validatePasswordOneUpperCase();
         userRegistration.validatePasswordOneNum();
         userRegistration.validatePasswordOneSpecialCharacter();
+        userRegistration.emailValidation();
     }
 }
