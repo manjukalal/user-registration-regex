@@ -50,4 +50,20 @@ public class UserRegistration {
 
     }
 
+    //User's Contact Number
+    public void validateContactNumber() {
+        scanner = new Scanner(System.in);
+        System.out.print("Enter contact number with country code : ");
+        String ContactNumber = scanner.nextLine();
+        boolean answer = Pattern.matches(".91?[6-9][0-9]{9}", ContactNumber);
+        if (answer) {
+            System.out.println(ContactNumber);
+            System.out.println(answer);
+        } else {
+            System.out.println("enter valid contact number");
+            validateContactNumber();
+        }
+
+    }
+
 }
