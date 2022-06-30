@@ -10,5 +10,6 @@ public class RegexMain {
         userRegistration.validateEmail();
         userRegistration.validateContactNumber();
         userRegistration.validatePasswordEightDigit();
+        userRegistration.validatePasswordOneUpperCase();
     }
 }
