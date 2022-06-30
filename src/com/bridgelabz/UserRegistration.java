@@ -7,7 +7,7 @@ public class UserRegistration {
 
     static Scanner scanner = new Scanner(System.in);
 
-    public void firstName() {
+    public void validateFirstName() {
         System.out.print("Enter First Name : ");
         String firstName = scanner.next();
         boolean answer = Pattern.matches("([A-Z]*[a-z]*){2,}", firstName);
@@ -16,11 +16,11 @@ public class UserRegistration {
             System.out.println(answer);
         } else {
             System.out.println("please enter valid first name ");
-            firstName();
+          validateFirstName();
         }
     }
 
-    public void lastName() {
+    public void validateLastName() {
         scanner = new Scanner(System.in);
         System.out.print("Enter Last Name : ");
         String lastName = scanner.next();
@@ -30,8 +30,24 @@ public class UserRegistration {
             System.out.println(answer);
         } else {
             System.out.println("please enter valid last name ");
-            lastName();
+            validateLastName();
         }
 
     }
+
+    public void validateEmail() {
+        scanner = new Scanner(System.in);
+        System.out.print("Enter email ID : ");
+        String email = scanner.next();
+        Boolean answer = Pattern.matches("[a-zA-Z\\d]+[^_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z.-]+", email);
+        if (answer) {
+            System.out.println(email);
+            System.out.println(answer);
+        } else {
+            System.out.println("please enter valid email ID ");
+            validateEmail();
+        }
+
+    }
+
 }
