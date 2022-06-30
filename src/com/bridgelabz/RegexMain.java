@@ -12,5 +12,6 @@ public class RegexMain {
         userRegistration.validatePasswordEightDigit();
         userRegistration.validatePasswordOneUpperCase();
         userRegistration.validatePasswordOneNum();
+        userRegistration.validatePasswordOneSpecialCharacter();
     }
 }
