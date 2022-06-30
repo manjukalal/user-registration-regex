@@ -9,5 +9,6 @@ public class RegexMain {
         userRegistration.validateLastName();
         userRegistration.validateEmail();
         userRegistration.validateContactNumber();
+        userRegistration.validatePasswordEightDigit();
     }
 }
